@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mis Tareas</h1>
+        
+        <p>Pendientes: <span id="pendingCount">0</span></p>
+
+        <input type="text" id="taskInput" placeholder="Nueva tarea...">
+        <button id="addButton">Agregar</button>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendientes</button>
+            <button class="filter-btn" data-filter="completed">Completadas</button>
+        </div>
+
+        <ul id="tasksList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
