@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Pedidos</title>
+</head>
+<body>
+    <h1>Gestor de Pedidos</h1>
+    <form action="tomar_pedido.php" method="POST">
+        <label>Mesa:</label>
+        <input type="number" name="mesa" min="1" required>
+        <br><br>
+
+        <label>Nombre del Cliente:</label>
+        <input type="text" name="cliente" required>
+        <br><br>
+
+        <h3>Platillos</h3>
+        <div id="platillos-container"></div>
+
+        <button type="button" onclick="agregarPlatillo()">Agregar Platillo</button>
+        <br><br>
+
+        <button type="submit">Registrar Pedido</button>
+    </form>
+
+    <script>
+        function agregarPlatillo() {
+            const container = document.getElementById('platillos-container');
+            const index = container.children.length;
+            
+            const div = document.createElement('div');
+            div.style.marginBottom = '10px';
+            div.innerHTML = `
+                <input type="text" name="platillos[${index}][nombre]" placeholder="Nombre" required>
+                <input type="number" step="0.01" name="platillos[${index}][precio]" placeholder="Precio" required>
+                <input type="number" name="platillos[${index}][cantidad]" placeholder="Cantidad" min="1" required>
+                <button type="button" onclick="this.parentElement.remove();">Eliminar</button>
+                <br>
+            `;
+            container.appendChild(div);
+        }
+
+        window.addEventListener('load', agregarPlatillo);
+    </script>
+</body>
+</html>
