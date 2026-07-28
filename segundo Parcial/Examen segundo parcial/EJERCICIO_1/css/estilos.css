@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.caja {
+    background: white;
+    border: 1px solid #999999;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 500px;
+}
+
+.ancho {
+    max-width: 1100px;
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+    margin-top: 3px;
+}
+
+button, .boton {
+    display: inline-block;
+    background: #2274a5;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.rojo {
+    background: #b02a37;
+}
+
+.gris {
+    background: #666666;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #777777;
+    padding: 7px;
+    text-align: left;
+}
+
+th {
+    background: #dddddd;
+}
+
+code {
+    display: inline-block;
+    margin: 4px;
+    background: #eeeeee;
+    padding: 4px;
+}
